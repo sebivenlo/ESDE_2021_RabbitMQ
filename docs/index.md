@@ -1,6 +1,8 @@
 # RabbitMQ - ESDE Workshop 2021
 The workshop is structured in the following way:  
 **_NOTE:_** You can visit the pages by clicking on the links below.  
-* [About RabbitMQ](about_rabbitmq.md)
-* [Theory Message Queues](theory_rabbitmq.md)
-* [Installation instructions](getting_started.md)
+1. [About RabbitMQ](about_rabbitmq.md)
+1. [Theory Message Queues](theory_rabbitmq.md)
+1. [Installation instructions](getting_started.md)
+1. [Exercises](exercises.md)
+1. [Quiz](quiz.md)

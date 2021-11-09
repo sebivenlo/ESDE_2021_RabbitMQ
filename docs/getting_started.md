@@ -18,6 +18,14 @@ To start the message broker, simply execute the following command in the console
 docker-compose up
 ```
 
+After the docker container has pulled the rabbitmq image, you can check whether the docker container runs by visiting the following website:
+[RabbitMQ Management UI](http://127.0.0.1:15672/)
+
+The default user credentials for this web interface are as follows:
+```
+username: guest
+password: guest
+```
 
 
 [← Previous chapter](theory_rabbitmq.md) | [Back to start page](index.md) | [Next chapter →](index.md)
