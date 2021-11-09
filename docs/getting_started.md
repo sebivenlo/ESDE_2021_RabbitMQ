@@ -20,4 +20,4 @@ docker-compose up
 
 
 
-[Back to start page](index.md)
+[← Previous chapter](theory_rabbitmq.md) | [Back to start page](index.md) | [Next chapter →](index.md)
