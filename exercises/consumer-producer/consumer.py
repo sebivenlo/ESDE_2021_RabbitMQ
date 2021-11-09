@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# Test
 import pika, sys, os
 
 def main():
