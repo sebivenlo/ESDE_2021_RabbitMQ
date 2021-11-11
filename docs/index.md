@@ -6,3 +6,4 @@ The workshop is structured in the following way:
 1. [Installation instructions](getting_started.md)
 1. [Exercises](exercises.md)
 1. [Quiz](quiz.md)
+1. [Presentation](presentation/index.html)
