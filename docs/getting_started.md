@@ -28,4 +28,4 @@ password: guest
 ```
 
 
-[← Previous chapter](theory_rabbitmq.md) | [Back to start page](index.md) | [Next chapter →](index.md)
+[← Previous chapter](presentation/index.html) | [Back to start page](index.md) | [Next chapter →](exercises.md)
