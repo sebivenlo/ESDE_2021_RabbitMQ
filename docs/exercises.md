@@ -1,6 +1,6 @@
-## Exercises
+# Exercises
 
-### Explore the RabbitMQ web interface
+## 1. Explore the RabbitMQ web interface
 
 As mentioned before, together with the docker-container, a web interface has been set up by RabbitMQ. This can be accessed by clicking on the following link:
 
@@ -14,6 +14,37 @@ password: guest
 
 The first exercise is to study the web interface a bit. There is no specific goal set for this exercise, so just explore for *1-5 minutes*.
 
-### Programming exercise
+## 2. Message durability
+
+The first exercise is used to get familiar with the environment and in particular specialties of RabbitMQ. Therefore, go into the folder ```exercises/ex1_consumer-producer/```. You'll find two python files:
+1. consumer.py &rarr; Consumes the message queue
+1. producer.py &rarr; Produces messages into the message queue
+
+
+**_Your task:_**
+```
+The developer of the message queue has created the python producer in a way that messages are lost when the message broker (here: docker-container) restarts.
+
+Can you change the producer in a way so that messages are not lost after a crash/restart?
+```
+**_To check that the messages are not lost and your task is completed, perform the following operations:_**
+
+1. Run the producer: ```python producer.py```
+1. Stop the producer with <kbd>Ctrl</kbd> + <kbd>C</kbd>
+1. Stop docker container with <kbd>Ctrl</kbd> + <kbd>C</kbd>
+1. Start docker container again with ```docker-compose up```
+1. Run the consumer: ```python consumer.py```
+
+*Execute the <kbd>Ctrl</kbd> + <kbd>C</kbd> hotkey in the terminal where the program runs (e.g. producer)*
+
+The exercise is finished, when after performing the above steps the messages from the producer are received by the consumer whicch have been sent *before* the restart of the message broker (docker container).
 
 [← Previous chapter](getting_started.md) | [Back to start page](index.md) | [Next chapter →](quiz.md)
+
+## 3. Message interpretation 
+
+The second exercise is used to get familiar with work distrubution in RabbitMQ and to first let the worker do "real" work. Therefore, go into the folder ```exercises/ex2_work_distribution/```. You'll find two python files:
+1. work_distributor.py &rarr; Produces work (tasks) for the worker
+1. worker.py &rarr; Gets a task from the work_distrubutor and processes it
+
+//TODO

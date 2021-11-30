@@ -1,3 +1,5 @@
+# Getting started
+
 ## Prerequisites
 In order to run the scripts and the RabbitMQ broker, please follow the instructions below.
 1. Install docker
