@@ -1,19 +1,22 @@
 #!/usr/bin/env python
 import pika
+import json
+import time
 import sys
-from datetime import datetime
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
-channel.queue_declare(queue='work_queue', durable=True)  # To declare/create the queue, if not happened before
+channel.exchange_declare(exchange='work_exchange', exchange_type='fanout')
+queue = channel.queue_declare(queue='work_queue_1')
+channel.queue_bind(queue=queue.method.queue, exchange='work_exchange')
 
+data = {'date': time.time(), 'message': ' '.join(sys.argv[1:]) or "Hello World!"}
 
-message = ' '.join(sys.argv[1:]) or "Hello World! - " + datetime.now().strftime("%H:%M:%S")
-channel.basic_publish(exchange='',
-                      routing_key='work_queue',
-                      body=message)
-print(" [☛] Sent %r" % message)
+channel.basic_publish(exchange='work_exchange',
+                      routing_key='',
+                      body=json.dumps(data))
+print(" [☛] Sent %r" % data)
 
 
 connection.close()
