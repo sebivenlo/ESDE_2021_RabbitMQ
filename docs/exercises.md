@@ -41,8 +41,6 @@ Can you implement the producer in a way so that messages are sent durable to the
 
 The exercise is finished, when after performing the above steps the messages from the producer are received by the consumer whicch have been sent *before* the restart of the message broker (docker container).
 
-[← Previous chapter](getting_started.md) | [Back to start page](index.md) | [Next chapter →](quiz.md)
-
 ## 3. Message interpretation 
 
 The second exercise is used to get familiar with work distrubution in RabbitMQ and to first let the worker do "real" work. Therefore, go into the folder ```exercises/ex2_work_distribution/```. You'll find two python files:
@@ -55,5 +53,7 @@ The company you are asked for to develop this piece of software wants to send me
 Besides that, you have to implement the process_task(task) function, which should load the JSON-string into a python object and print return (depending on the task) a string like this:
 
 "Message - Date: 2021-12-07 16:18:13.662463"
-
 ```
+
+
+[← Previous chapter](getting_started.md) | [Back to start page](index.md)
