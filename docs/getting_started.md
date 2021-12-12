@@ -44,4 +44,4 @@ password: guest
 ```
 
 
-[← Previous chapter](presentation/index.html) | [Back to start page](index.md) | [Next chapter →](exercises.md)
+[← Previous chapter](presentation/index.html) | [Back to start page](index.md) | [Next chapter →](quiz.md)
